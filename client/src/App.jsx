@@ -10,6 +10,7 @@ import Team from "./pages/Dashboard/Team";
 import Contacts from "./pages/Dashboard/Contacts";
 import Invoices from "./pages/Dashboard/Invoices";
 import Profile from "./pages/Dashboard/Profile";
+import Calendar from "./pages/Dashboard/Calendar";
 
 function App() {
 
@@ -28,6 +29,7 @@ function App() {
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/profile" element={<Profile />} />
+                <Route path="/calendar" element={<Calendar />} />
               </Routes>
             </main>
           </div>
@@ -36,4 +38,4 @@ function App() {
   )
 }
 
-export default App
+export default App;
