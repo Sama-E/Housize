@@ -12,6 +12,7 @@ import Invoices from "./pages/Dashboard/Invoices";
 import Profile from "./pages/Dashboard/Profile";
 import Calendar from "./pages/Dashboard/Calendar";
 
+
 function App() {
 
   const [theme, colorMode] = useMode();
@@ -30,6 +31,7 @@ function App() {
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/calendar" element={<Calendar />} />
+
               </Routes>
             </main>
           </div>
