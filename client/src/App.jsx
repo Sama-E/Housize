@@ -9,6 +9,7 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import Team from "./pages/Dashboard/Team";
 import Contacts from "./pages/Dashboard/Contacts";
 import Invoices from "./pages/Dashboard/Invoices";
+import Profile from "./pages/Dashboard/Profile";
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
                 <Route path="/team" element={<Team />} />
                 <Route path="/contacts" element={<Contacts />} />
                 <Route path="/invoices" element={<Invoices />} />
+                <Route path="/profile" element={<Profile />} />
               </Routes>
             </main>
           </div>
