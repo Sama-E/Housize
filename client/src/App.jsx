@@ -13,6 +13,10 @@ import Profile from "./pages/Dashboard/Profile";
 import Calendar from "./pages/Dashboard/Calendar";
 import CalendarModal from "./components/CalendarModal";
 import Accord from "./pages/Dashboard/Accord";
+import Bar from "./pages/Charts/Bar";
+import Line from './pages/Charts/Line';
+import Geo from './pages/Charts/Geo';
+import Pie from './pages/Charts/Pie';
 
 function App() {
 
@@ -34,6 +38,10 @@ function App() {
                 <Route path="/calendar" element={<Calendar />} />
                 <Route path="/calendarmodal" element={<CalendarModal />} />
                 <Route path="/faq" element={<Accord />} />
+                <Route path="/bar" element={<Bar />} />
+                <Route path="/line" element={<Line />} />
+                <Route path="/geography" element={<Geo />} />
+                <Route path="/pie" element={<Pie />} />
               </Routes>
             </main>
           </div>
