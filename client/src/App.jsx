@@ -11,7 +11,8 @@ import Contacts from "./pages/Dashboard/Contacts";
 import Invoices from "./pages/Dashboard/Invoices";
 import Profile from "./pages/Dashboard/Profile";
 import Calendar from "./pages/Dashboard/Calendar";
-
+import CalendarModal from "./components/CalendarModal";
+import Accord from "./pages/Dashboard/Accord";
 
 function App() {
 
@@ -31,7 +32,8 @@ function App() {
                 <Route path="/invoices" element={<Invoices />} />
                 <Route path="/profile" element={<Profile />} />
                 <Route path="/calendar" element={<Calendar />} />
-
+                <Route path="/calendarmodal" element={<CalendarModal />} />
+                <Route path="/faq" element={<Accord />} />
               </Routes>
             </main>
           </div>

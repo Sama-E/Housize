@@ -1,6 +1,5 @@
 import { useState } from "react";
-import FullCalendar from '@fullcalendar/react';
-import { formatDate } from "@fullcalendar/core";
+import { Calendar, formatDate } from "@fullcalendar/core";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
@@ -17,7 +16,7 @@ import {
 import { tokens } from "/src/theme";
 import Header from "/src/components/Header";
 
-const Calendar = () => {
+const FullCalendar = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
 
@@ -42,7 +41,7 @@ const Calendar = () => {
   const handleEventClick = (selected) => {
     if (
       window.confirm(
-        `Are you sure you want to cancel the event '${selected.event.title}'`
+        `Are you sure you want to delete the event '${selected.event.title}'`
       )
     ) {
       selected.event.remove();
@@ -52,7 +51,7 @@ const Calendar = () => {
   return (
     <Box m="20px">
     <Header title="Calendar" subtitle="Full Calendar Interactive Page" />
-      <Box display="flex" justifyContent="space-between">
+    <Box display="flex" justifyContent="space-between">
         {/* CALENDAR SIDEBAR */}
         <Box
           flex="1 1 20%"
@@ -90,7 +89,7 @@ const Calendar = () => {
 
         {/* CALENDAR */}
         <Box flex="1 1 100%" ml="15px">
-          <FullCalendar
+          <Calendar
             height="75vh"
             plugins={[
               dayGridPlugin,
@@ -130,4 +129,4 @@ const Calendar = () => {
   )
 }
 
-export default Calendar;
+export default FullCalendar;
