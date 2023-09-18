@@ -1,7 +1,7 @@
 import { ColorModeContext, tokens } from "../../theme";
 import { useContext } from "react";
 
-import { Box, IconButton, useTheme } from "@mui/material";
+import { Box, IconButton, Typography,useTheme } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
 import LightModeOutlinedIcon from "@mui/icons-material/LightModeOutlined";
 import DarkModeOutlinedIcon from "@mui/icons-material/DarkModeOutlined";
@@ -19,6 +19,18 @@ const Topbar = () => {
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
+      {/* LOGO */}
+      {/* <Box
+        display="flex"
+        backgroundColor={colors.primary[500]}
+        borderRadius="3px"
+        marginRight={8}
+      >
+        {/* Logo */}
+        {/*<Typography variant="h2" color={colors.grey[400]}>
+          haus.Admin
+        </Typography>
+      </Box> */}
 
       {/* SEARCH BAR */}
       <Box

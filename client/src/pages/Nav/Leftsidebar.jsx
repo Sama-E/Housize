@@ -23,8 +23,8 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   return (
-    <Link to={to} style={{textDecoration: "none"}}>
-      <MenuItem
+    
+      <MenuItem component={<Link to={to} />}
         active={selected === title}
         style={{
           color: colors.grey[600],
@@ -33,8 +33,8 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
         icon={icon}
       >
         <Typography>{title}</Typography>
+        
       </MenuItem>
-    </Link>
   );
 };
 
@@ -49,21 +49,22 @@ const Leftsidebar = () => {
   return (
     <Box
       sx={{
-        "& .pro-sidebar-inner": {
+        "& .sidebar-inner": {
           background: `${colors.primary[400]} !important`,
         },
-        "& .pro-icon-wrapper": {
+        "& .icon-wrapper": {
           backgroundColor: "transparent !important",
         },
-        "& .pro-inner-item": {
+        "& .inner-item": {
           padding: "5px 35px 5px 20px !important",
         },
-        "& .pro-inner-item:hover": {
+        "& .inner-item:hover": {
           color: "#868dfb !important",
         },
-        "& .pro-menu-item.active": {
+        "& .menu-item.active": {
           color: "#6870fa !important",
         },
+        
       }}
       >
       <Sidebar collapsed={isCollapsed}>
@@ -85,9 +86,8 @@ const Leftsidebar = () => {
                 alignItems="center"
                 ml="15px"
               >
-                {/* Logo */}
-                <Typography variant="h3" color={colors.grey[600]}>
-                  haus.Admin
+                <Typography variant="h5" color={colors.grey[600]}>
+                  Primary Resident
                 </Typography>
 
                 {/* Menu Icon */}
@@ -150,7 +150,7 @@ const Leftsidebar = () => {
               sx={{ m: "15px 0 5px 20px" }}
             >
 
-          {/* TEAM - Realtor, Inspectors, Contractors, Accountant, Insurer, HOA */}
+
               Data
             </Typography>
             <Item
@@ -175,7 +175,7 @@ const Leftsidebar = () => {
               setSelected={setSelected}
             />
 
-          {/* HOUSE PROFILE - Photo Gallery, Layout/Blueprint, Location */}
+
             <Typography
               variant="h6"
               color={colors.grey[600]}
@@ -206,15 +206,11 @@ const Leftsidebar = () => {
               setSelected={setSelected}
             />
 
-          {/* HOUSE MAINTENANCE - Maintenance Calendar, Seasonal Log, Inspection Reports, Invoices, Tax Forms  */}
 
 
 
-          {/* HOUSE ECONOMICS - Mortgage, Taxes, Insurance, Appraisal, Neighborhood Demographics and Stats */}
 
-          {/* Internal Rate of Return - annualized total return is an annual rate earned on each dollar invested for the period it is invested. */}
-          {/* Capitalization Rate - is the ratio of net operating income (NOI) to the investment asset value or current market value. */}
-          {/* Cash Flow Return on Investment -identify the losses/gains associated with ongoing cash flows. */}
+
 
             <Typography
               variant="h6"
@@ -253,7 +249,7 @@ const Leftsidebar = () => {
               setSelected={setSelected}
             />
 
-            {/* Add LEGAL SECTION - Housing Laws, HOA rules, Inheritance Will */}
+
 
           </Box>
 

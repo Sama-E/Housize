@@ -13,10 +13,10 @@ import Profile from "./pages/Dashboard/Profile";
 import Calendar from "./pages/Dashboard/Calendar";
 import CalendarModal from "./components/CalendarModal";
 import Accord from "./pages/Dashboard/Accord";
-import Bar from "./pages/Charts/Bar";
-import Line from './pages/Charts/Line';
-import Geo from './pages/Charts/Geo';
-import Pie from './pages/Charts/Pie';
+import Bar from "./pages/Dashboard/Charts/Bar";
+import Line from './pages/Dashboard/Charts/Line';
+import Geo from './pages/Dashboard/Charts/Geo';
+import Pie from './pages/Dashboard/Charts/Pie';
 
 function App() {
 
@@ -28,7 +28,7 @@ function App() {
           <div className="app">
             <Leftsidebar />
             <main className="content">
-              <Topbar />
+            <Topbar />
               <Routes>
                 <Route path="/" element={<Dashboard />} />
                 <Route path="/team" element={<Team />} />
